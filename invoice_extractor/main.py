@@ -1,10 +1,12 @@
 import json
+import logging
+logging.basicConfig(level=logging.INFO)
 from pprint import pprint
 import csv
 import click
 from openpyxl.styles import Font
 
-from extract import extract_invoice_data_from_pdf
+from .extract import extract_invoice_data_from_pdf
 
 
 import openpyxl
@@ -78,10 +80,8 @@ def write_to_xlsx_file(data, file_name):
     workbook.save(file_name)
 
 def extract_data_from_pdf(pdf_file)->dict:
-    print(f"Extracting data from {pdf_file}...")
-    return invoice_data_template
+    logging.info(f"Extracting data from {pdf_file}...")
     output = extract_invoice_data_from_pdf(pdf_file)
-    print(output)
     return json.loads(output.strip())
 
 @click.command()

@@ -5,3 +5,5 @@ test.html
 .DS_Store
 __pycache__
 test_docs_single
+dist
+InvoiceExtractor.egg-info/
