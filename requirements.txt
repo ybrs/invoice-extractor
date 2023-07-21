@@ -1,0 +1,5 @@
+pdfplumber==0.10.1
+langchain==0.0.238
+openai==0.27.8
+pdfplumber==0.10.1
+pdfminer==20191125

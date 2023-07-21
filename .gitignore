@@ -1,0 +1,5 @@
+.idea/
+test_docs/
+venv/
+test.html
+.DS_Store
