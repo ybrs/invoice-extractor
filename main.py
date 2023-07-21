@@ -137,7 +137,7 @@ def process_dir(directory, output_file):
     import os
 
     existing_file_names = set()
-    if os.path.exists(output_file):
+    if output_file.endswith('.xlsx') and os.path.exists(output_file):
         existing_file_names = read_file_names_from_xlsx(output_file)
 
 
